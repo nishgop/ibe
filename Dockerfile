@@ -1,5 +1,5 @@
 FROM node:12.8.1
-#hkjhkhk
+
 # Create application directory
 WORKDIR /usr/src/app
 
