@@ -1,0 +1,15 @@
+{
+  "name": "@capire/ibe",
+  "version": "1.0.0",
+  "dependencies": {
+    "@sap/cds": "^5"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "model": "*"
+      }
+    }
+  }
+}

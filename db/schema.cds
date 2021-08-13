@@ -1,0 +1,51 @@
+using {
+    Currency,
+    User,
+    managed,
+    cuid
+} from '@sap/cds/common';
+
+namespace sap.capire.ibe;
+
+type vehicleType : Integer enum {
+    SUV       = 1;
+    Sedan     = 2;
+    Hatchback = 3;
+    Truck     = 4;
+}
+
+type userType : Integer enum {
+    Admin  = 1;
+    Buyer  = 2;
+    Seller = 3;
+}
+
+type fetaureType : Integer enum {
+    Mandatory = 1;
+    Optional  = 2;
+}
+
+entity ibeReq : cuid, managed {
+    ReqNo        : String @title : 'Ibe Order Number'; //> readable key
+    Items        : Composition of many ibeReq_Items
+                       on Items.up_ = $self;
+    versionID    : UUID;
+    vehicleType  : String;
+    desiredPrice : Decimal(9, 2);
+    currency     : Currency;
+    validToDate  : Date;
+    url          : String;
+    buyer        : User;
+    userType     : userType;
+    comment      : String;
+}
+
+entity ibeReq_Items {
+    key ID          : UUID;
+        up_         : Association to ibeReq;
+        fetaureName : String;
+        fetaureType : String;
+        price       : Double;
+        url         : String;
+        comment     : String;
+}
