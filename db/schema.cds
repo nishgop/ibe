@@ -25,6 +25,12 @@ type fetaureType : Integer enum {
     Optional  = 2;
 }
 
+type DocStatus : Integer enum {
+    draft = 1;
+    published = 2;
+    archived = 3;
+
+}
 
 entity ibeReq : cuid, managed {
     ReqNo        : String @title : 'Ibe Order Number'; //> readable key
@@ -38,6 +44,7 @@ entity ibeReq : cuid, managed {
     url          : String;
     buyer        : User;
     userType     : userType;
+    DocStatus    : DocStatus;
     comment      : String;
 }
 
