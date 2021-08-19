@@ -163,6 +163,12 @@
         "vehicleType": {
           "type": "cds.String"
         },
+        "vehicleMake": {
+          "type": "cds.String"
+        },
+        "vehicleModel": {
+          "type": "cds.String"
+        },
         "desiredPrice": {
           "type": "cds.Decimal",
           "precision": 9,
@@ -272,6 +278,12 @@
             "=": "createdAt"
           },
           "Label": "Date"
+        },
+        {
+          "Value": {
+            "=": "vehicleMake"
+          },
+          "Label": "Make"
         },
         {
           "Value": {
@@ -488,6 +500,12 @@
           "type": "cds.UUID"
         },
         "vehicleType": {
+          "type": "cds.String"
+        },
+        "vehicleMake": {
+          "type": "cds.String"
+        },
+        "vehicleModel": {
           "type": "cds.String"
         },
         "desiredPrice": {

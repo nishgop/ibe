@@ -38,6 +38,8 @@ entity ibeReq : cuid, managed {
                        on Items.up_ = $self;
     versionID    : UUID;
     vehicleType  : String;
+    vehicleMake  : String;
+    vehicleModel : String;
     desiredPrice : Decimal(9, 2);
     currency     : Currency;
     validToDate  : Date;
