@@ -1127,7 +1127,17 @@
           "Value": {
             "=": "url"
           },
-          "Label": "url"
+          "@Core.Links": [
+            {
+              "$Type": "Core.Link",
+              "rel": {
+                "=": "url"
+              },
+              "href": {
+                "=": "url"
+              }
+            }
+          ]
         }
       ],
       "@UI.Identification": [
