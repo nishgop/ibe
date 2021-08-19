@@ -84,7 +84,13 @@ annotate ibeService.ibeReq_Items with @(
 			{Value: fetaureType, Label:'Feature Type'},
 			{Value: price, Label:'Unit Price'},
 			{Value: comment, Label:'comments'},
-            {Value: url, Label:'url'},
+            {Value: url, ![@Core.Links]: [
+                {
+                    $Type : 'Core.Link',
+                    rel : url,
+                    href : url,
+                },
+            ], },
 		],
 		Identification: [ //Is the main field group
 			{Value: fetaureName, Label:'Feature'},
