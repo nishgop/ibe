@@ -46,6 +46,21 @@
         }
       }
     },
+    "sap.capire.ibe.DocStatus": {
+      "kind": "type",
+      "type": "cds.Integer",
+      "enum": {
+        "draft": {
+          "val": 1
+        },
+        "published": {
+          "val": 2
+        },
+        "archived": {
+          "val": 3
+        }
+      }
+    },
     "sap.capire.ibe.ibeReq": {
       "kind": "entity",
       "includes": [
@@ -181,6 +196,9 @@
         "userType": {
           "type": "sap.capire.ibe.userType"
         },
+        "DocStatus": {
+          "type": "sap.capire.ibe.DocStatus"
+        },
         "comment": {
           "type": "cds.String"
         }
@@ -257,6 +275,12 @@
         },
         {
           "Value": {
+            "=": "DocStatus"
+          },
+          "Label": "Status"
+        },
+        {
+          "Value": {
             "=": "url"
           },
           "Label": "url"
@@ -287,7 +311,8 @@
         {
           "Value": {
             "=": "ReqNo"
-          }
+          },
+          "Label": "ReqNo"
         },
         {
           "Value": {
@@ -497,6 +522,9 @@
         },
         "userType": {
           "type": "sap.capire.ibe.userType"
+        },
+        "DocStatus": {
+          "type": "sap.capire.ibe.DocStatus"
         },
         "comment": {
           "type": "cds.String"

@@ -44,6 +44,7 @@ entity ibeReq : cuid, managed {
     url          : String;
     buyer        : User;
     userType     : userType;
+    DocStatus    : DocStatus;
     comment      : String;
 }
 
