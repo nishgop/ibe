@@ -25,6 +25,13 @@ type fetaureType : Integer enum {
     Optional  = 2;
 }
 
+type DocStatus : Integer enum {
+    draft = 1;
+    published = 2;
+    archived = 3;
+
+}
+
 entity ibeReq : cuid, managed {
     ReqNo        : String @title : 'Ibe Order Number'; //> readable key
     Items        : Composition of many ibeReq_Items
