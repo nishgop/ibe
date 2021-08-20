@@ -1,6 +1,5 @@
 const cds = require ('@sap/cds')
 class ibeService extends cds.ApplicationService {
-// test commeent SR 2
   /** register custom handlers */
   init(){
     const { ibeReq_Items: ibeReq_Items } = this.entities
