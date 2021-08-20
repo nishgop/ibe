@@ -21,6 +21,8 @@ annotate ibeService.ibe with @(
 			{Value: ReqNo, Label:'Requirement No#'},
             {Value: buyer, Label:'Customer'},
 			{Value: createdAt, Label:'Date'},
+			{Value: vehicleMake, Label:'Make'},
+			{Value: DocStatus, Label: 'Status' },
             {Value: url, Label: 'url'}
 		],
 		HeaderInfo: {
@@ -34,7 +36,7 @@ annotate ibeService.ibe with @(
 		Identification: [ //Is the main field group
 			{Value: createdBy, Label:'Customer'},
 			{Value: createdAt, Label:'Date'},
-			{Value: ReqNo },
+			{Value: ReqNo, Label: 'ReqNo' },
             {Value: url, ![@Core.Links] : [
                 {
                     $Type : 'Core.Link',
@@ -82,7 +84,13 @@ annotate ibeService.ibeReq_Items with @(
 			{Value: fetaureType, Label:'Feature Type'},
 			{Value: price, Label:'Unit Price'},
 			{Value: comment, Label:'comments'},
-            {Value: url, Label:'url'},
+            {Value: url, ![@Core.Links]: [
+                {
+                    $Type : 'Core.Link',
+                    rel : url,
+                    href : url,
+                },
+            ], },
 		],
 		Identification: [ //Is the main field group
 			{Value: fetaureName, Label:'Feature'},

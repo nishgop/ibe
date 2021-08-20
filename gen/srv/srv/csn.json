@@ -46,6 +46,21 @@
         }
       }
     },
+    "sap.capire.ibe.DocStatus": {
+      "kind": "type",
+      "type": "cds.Integer",
+      "enum": {
+        "draft": {
+          "val": 1
+        },
+        "published": {
+          "val": 2
+        },
+        "archived": {
+          "val": 3
+        }
+      }
+    },
     "sap.capire.ibe.ibeReq": {
       "kind": "entity",
       "includes": [
@@ -148,6 +163,12 @@
         "vehicleType": {
           "type": "cds.String"
         },
+        "vehicleMake": {
+          "type": "cds.String"
+        },
+        "vehicleModel": {
+          "type": "cds.String"
+        },
         "desiredPrice": {
           "type": "cds.Decimal",
           "precision": 9,
@@ -180,6 +201,9 @@
         },
         "userType": {
           "type": "sap.capire.ibe.userType"
+        },
+        "DocStatus": {
+          "type": "sap.capire.ibe.DocStatus"
         },
         "comment": {
           "type": "cds.String"
@@ -257,6 +281,18 @@
         },
         {
           "Value": {
+            "=": "vehicleMake"
+          },
+          "Label": "Make"
+        },
+        {
+          "Value": {
+            "=": "DocStatus"
+          },
+          "Label": "Status"
+        },
+        {
+          "Value": {
             "=": "url"
           },
           "Label": "url"
@@ -287,7 +323,8 @@
         {
           "Value": {
             "=": "ReqNo"
-          }
+          },
+          "Label": "ReqNo"
         },
         {
           "Value": {
@@ -465,6 +502,12 @@
         "vehicleType": {
           "type": "cds.String"
         },
+        "vehicleMake": {
+          "type": "cds.String"
+        },
+        "vehicleModel": {
+          "type": "cds.String"
+        },
         "desiredPrice": {
           "type": "cds.Decimal",
           "precision": 9,
@@ -497,6 +540,9 @@
         },
         "userType": {
           "type": "sap.capire.ibe.userType"
+        },
+        "DocStatus": {
+          "type": "sap.capire.ibe.DocStatus"
         },
         "comment": {
           "type": "cds.String"
@@ -1081,7 +1127,17 @@
           "Value": {
             "=": "url"
           },
-          "Label": "url"
+          "@Core.Links": [
+            {
+              "$Type": "Core.Link",
+              "rel": {
+                "=": "url"
+              },
+              "href": {
+                "=": "url"
+              }
+            }
+          ]
         }
       ],
       "@UI.Identification": [

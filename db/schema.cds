@@ -25,6 +25,12 @@ type fetaureType : Integer enum {
     Optional  = 2;
 }
 
+type DocStatus : Integer enum {
+    draft = 1;
+    published = 2;
+    archived = 3;
+
+}
 
 entity ibeReq : cuid, managed {
     ReqNo        : String @title : 'Ibe Order Number'; //> readable key
@@ -32,12 +38,15 @@ entity ibeReq : cuid, managed {
                        on Items.up_ = $self;
     versionID    : UUID;
     vehicleType  : String;
+    vehicleMake  : String;
+    vehicleModel : String;
     desiredPrice : Decimal(9, 2);
     currency     : Currency;
     validToDate  : Date;
     url          : String;
     buyer        : User;
     userType     : userType;
+    DocStatus    : DocStatus;
     comment      : String;
 }
 
