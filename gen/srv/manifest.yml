@@ -1,6 +1,6 @@
 ---
 applications:
-  - name: ibe-srv
+  - name: ibeimage-srv
     path: .
     memory: 256M
     buildpacks:
