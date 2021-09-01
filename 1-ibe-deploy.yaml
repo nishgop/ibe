@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: ibe-app
-        image: nishgopdocker/ibe
+        image: nishgopdocker/ibeimage
         imagePullPolicy: Always
         resources:
           limits:
