@@ -169,6 +169,9 @@
         "vehicleModel": {
           "type": "cds.String"
         },
+        "vehicleTrim": {
+          "type": "cds.String"
+        },
         "desiredPrice": {
           "type": "cds.Decimal",
           "precision": 9,
@@ -284,6 +287,18 @@
             "=": "vehicleMake"
           },
           "Label": "Make"
+        },
+        {
+          "Value": {
+            "=": "vehicleModel"
+          },
+          "Label": "Model"
+        },
+        {
+          "Value": {
+            "=": "vehicleTrim"
+          },
+          "Label": "Trim"
         },
         {
           "Value": {
@@ -506,6 +521,9 @@
           "type": "cds.String"
         },
         "vehicleModel": {
+          "type": "cds.String"
+        },
+        "vehicleTrim": {
           "type": "cds.String"
         },
         "desiredPrice": {

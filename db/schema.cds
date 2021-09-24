@@ -40,6 +40,7 @@ entity ibeReq : cuid, managed {
     vehicleType  : String;
     vehicleMake  : String;
     vehicleModel : String;
+    vehicleTrim  : String;
     desiredPrice : Decimal(9, 2);
     currency     : Currency;
     validToDate  : Date;
