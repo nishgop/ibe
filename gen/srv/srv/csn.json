@@ -290,18 +290,6 @@
         },
         {
           "Value": {
-            "=": "vehicleModel"
-          },
-          "Label": "Model"
-        },
-        {
-          "Value": {
-            "=": "vehicleTrim"
-          },
-          "Label": "Trim"
-        },
-        {
-          "Value": {
             "=": "DocStatus"
           },
           "Label": "Status"

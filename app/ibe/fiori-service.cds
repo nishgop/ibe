@@ -22,8 +22,6 @@ annotate ibeService.ibe with @(
             {Value: buyer, Label:'Customer'},
 			{Value: createdAt, Label:'Date'},
 			{Value: vehicleMake, Label:'Make'},
-			{Value: vehicleModel, Label:'Model'},
-			{Value: vehicleTrim, Label:'Trim'},
 			{Value: DocStatus, Label: 'Status' },
             {Value: url, Label: 'url'}
 		],
